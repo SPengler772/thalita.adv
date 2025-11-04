@@ -322,12 +322,52 @@
       FOOTER 
       Simples, com copyright.
     -->
-    <footer class="bg-brand-blue py-8">
+      <footer class="bg-brand-blue py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
             <p>&copy; 2024 Dra. Thalita Ribeiro Advocacia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- Script para redirecionar o formulário para o WhatsApp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pega o formulário pelo ID
+            const contactForm = document.getElementById('contact-form');
+
+            if (contactForm) {
+                // Adiciona um 'escutador' para o evento de 'submit'
+                contactForm.addEventListener('submit', function(event) {
+                    // 1. Impede o envio padrão do formulário (que recarregaria a página)
+                    event.preventDefault();
+
+                    // 2. Coleta os dados dos campos do formulário
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const message = document.getElementById('message').value;
+
+                    // 3. ATENÇÃO: Coloque aqui o seu número de WhatsApp com o código do país
+                    const waNumber = "5562991524475";
+
+                    // 4. Monta a mensagem formatada
+                    let waMessage = `Olá, Dra. Thalita! Vim pelo site.\n\n`;
+                    waMessage += `*Nome:* ${name}\n`;
+                    waMessage += `*E-mail:* ${email}\n`;
+                    waMessage += `*Telefone:* ${phone}\n\n`;
+                    waMessage += `*Mensagem:*\n${message}`;
+
+                    // 5. Codifica a mensagem para ser usada em uma URL
+                    const encodedMessage = encodeURIComponent(waMessage);
+
+                    // 6. Cria a URL final do WhatsApp
+                    const waURL = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+
+                    // 7. Abre o WhatsApp em uma nova aba
+                    window.open(waURL, '_blank');
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
-
