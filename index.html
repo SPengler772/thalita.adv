@@ -6,7 +6,7 @@
     <title>Advocacia | Especialista em Previdenciário, Trabalhista e Cível</title>
     
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script >
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Script para customizar as cores do Tailwind -->
     <script>
@@ -43,9 +43,9 @@
 
         /* Estilo para a imagem de fundo do Hero */
         #home {
-            background-image: url('direito.jpeg');
+            background-image: url('B38A47C6-DEE9-448D-8C48-1BE81CA92EB5.jpeg.jpg');
             background-size: cover;
-            background-position: auto;
+            background-position: center;
             background-attachment: fixed;
         }
     </style>
@@ -56,15 +56,12 @@
       HEADER 
       Simples e funcional, com foco na ação principal (Contato).
     -->
- <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        
-        <a href="#home">
-            <img 
-              src="logo.png" 
-              alt="Logo Dra. Thalita Ribeiro" 
-              class="h-12 w-auto"  >
-        </a>
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo (Pode ser substituído por um <img>) -->
+            <a href="#home" class="text-2xl font-bold text-brand-blue">
+                Dra. Thalita Ribeiro
+            </a>
             
             <!-- Botão de Ação Principal -->
             <a href="#contato" class="hidden sm:inline-block bg-brand-gold text-brand-blue px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-brand-gold/90 transition duration-300">
@@ -163,7 +160,7 @@
           Humaniza a advogada e gera credibilidade.
           *** TEXTO ATUALIZADO CONFORME SOLICITADO ***
         -->
-       <section id="sobre" class="bg-brand-blue text-white py-16 sm:py-24">
+        <section id="sobre" class="bg-brand-blue text-white py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
                     <!-- Imagem da Advogada -->
@@ -234,7 +231,8 @@
 
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
                     <!-- Formulário de Contato -->
-                    <form action="#" method="POST" class="space-y-6">
+                    <!-- Adicionado id="contact-form" para o JavaScript -->
+                    <form id="contact-form" action="#" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Nome Completo</label>
                             <input type="text" name="name" id="name" required
@@ -269,15 +267,15 @@
                             <div class="flex-shrink-0">
                                 <!-- Ícone WhatsApp -->
                                 <!-- (Usei um ícone diferente do SVG original que estava quebrado) -->
-                                <svg class="h-8 w-8 text-green-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 23.943L4.823 22.11a11.917 11.917 0 01-2.61-6.092C2.21 9.61 6.61 5.21 12.018 5.21c5.407 0 9.808 4.4 9.808 9.807 0 5.408-4.4 9.808-9.808 9.808a11.9 11.9 0 01-5.748-1.583L.057 23.943zm4.98-2.682l.338.197c1.65 1.01 3.596 1.558 5.62 1.558 4.793 0 8.68-3.888 8.68-8.68 0-4.793-3.888-8.68-8.68-8.68-4.794 0-8.68 3.888-8.68 8.68 0 2.15.787 4.11 2.08 5.65l.23.335-1.124 2.91 2.96-.983zM12.018 7.31a.57.57 0 00-.57.57v3.42c0 .315.255.57.57.57h3.42a.57.57 0 00.57-.57v-3.42a.57.57 0 00-.57-.57h-3.42zm4.5 5.123c-.225-.113-1.33-.656-1.536-.73-.207-.074-.356-.113-.506.113-.15.225-.58.73-.71 1.04-.13.315-.26.356-.486.225-.225-.13-1.16-.428-2.21-1.36-.816-.73-1.36-1.636-1.51-1.91-.15-.27-.015-.42.1-.555.113-.113.248-.28.373-.42.124-.14.167-.248.25-.413.08-.167.04-.315-.015-.428-.056-.113-.506-1.22-.69-1.67-.184-.45-.37-.39-.506-.39-.13 0-.28 0-.43.015-.15.015-.39.056-.6.315-.21.26-.816.8-.816 1.95 0 1.15.83 2.26 1.18 2.68.35.42 1.7 2.58 4.11 3.61 2.41 1.03 2.41.69 2.84.63.43-.06 1.33-.54 1.51-.96.18-.42.18-.78.13-1.04-.05-.26-.18-.39-.37-.53z"/></svg>
+                                <svg class="h-8 w-8 text-green-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 23.943L4.823 22.11a11.917 11.917 0 01-2.61-6.092C2.21 9.61 6.61 5.21 12.018 5.21c5.407 0 9.808 4.4 9.808 9.807 0 5.408-4.4 9.808-9.808 9.808a11.9 11.9 0 01-5.748-1.583L.057 23.943zm4.98-2.682l.338.197c1.65 1.01 3.596 1.558 5.62 1.558 4.793 0 8.68-3.888 8.68-8.68 0-4.793-3.888-8.68-8.68-8.68-4.794 0-8.68 3.888-8.68 8.68 0 2.15.787 4.11 2.08 5.65l.23.335-1.124 2.91 2.96-.983zM12.018 7.31a.75.75 0 00-.75.75v3.18c0 .414.336.75.75.75h3.18a.75.75 0 00.75-.75v-3.18a.75.75 0 00-.75-.75h-3.18zm4.5 5.123c-.225-.113-1.33-.656-1.536-.73-.207-.074-.356-.113-.506.113-.15.225-.58.73-.71 1.04-.13.315-.26.356-.486.225-.225-.13-1.16-.428-2.21-1.36-.816-.73-1.36-1.636-1.51-1.91-.15-.27-.015-.42.1-.555.113-.113.248-.28.373-.42.124-.14.167-.248.25-.413.08-.167.04-.315-.015-.428-.056-.113-.506-1.22-.69-1.67-.184-.45-.37-.39-.506-.39-.13 0-.28 0-.43.015-.15.015-.39.056-.6.315-.21.26-.816.8-.816 1.95 0 1.15.83 2.26 1.18 2.68.35.42 1.7 2.58 4.11 3.61 2.41 1.03 2.41.69 2.84.63.43-.06 1.33-.54 1.51-.96.18-.42.18-.78.13-1.04-.05-.26-.18-.39-.37-.53z"/></svg>
                             </div>
                             <div class="ml-4">
                                 <h3 class="text-xl font-semibold text-brand-blue">WhatsApp</h3>
                                 <p class="mt-1 text-lg text-gray-600">Clique e fale agora mesmo.</p>
-                                <a href="https://wa.me/5562991524475?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+uma+consulta." 
+                                <a href="https://wa.me/5511912345678?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+uma+consulta." 
                                    target="_blank" 
                                    class="mt-2 inline-block text-lg text-green-600 font-medium hover:text-green-700">
-                                    (62) 99152-4475
+                                    (11) 91234-5678
                                 </a>
                             </div>
                         </div>
@@ -306,9 +304,8 @@
                             <div class="ml-4">
                                 <h3 class="text-xl font-semibold text-brand-blue">Endereço</h3>
                                 <p class="mt-1 text-lg text-gray-600">
-                                    R. Versales, QD 03 - LT 08<br>
-                                    Res. Village Garavelo<br>
-                                    Aparecida de Goiânia - GO, 74968-541
+                                    Rua Exemplo, 123, Sala 45<br>
+                                    Bairro, Cidade - UF, CEP XXXXX-XXX
                                 </p>
                             </div>
                         </div>
@@ -322,7 +319,7 @@
       FOOTER 
       Simples, com copyright.
     -->
-      <footer class="bg-brand-blue py-8">
+    <footer class="bg-brand-blue py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
             <p>&copy; 2024 Dra. Thalita Ribeiro Advocacia. Todos os direitos reservados.</p>
         </div>
@@ -350,7 +347,7 @@
                     const waNumber = "5562991524475";
 
                     // 4. Monta a mensagem formatada
-                    let waMessage = `Olá, Dra. Thalita! Vim pelo site.\n\n`;
+                    let waMessage = `Olá, Dra. Thalita Ribeiro! Vim pelo site.\n\n`;
                     waMessage += `*Nome:* ${name}\n`;
                     waMessage += `*E-mail:* ${email}\n`;
                     waMessage += `*Telefone:* ${phone}\n\n`;
@@ -371,3 +368,4 @@
 
 </body>
 </html>
+
