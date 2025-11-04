@@ -177,18 +177,263 @@
                             
                     </div>
                     
-                    <!-- Texto Sobre -->
-                    <div class="w-full md:w-1/2 lg:w-7/12">
-                        <h2 class="text-3xl sm:text-4xl font-bold text-white">Sobre a Dra. [Nome da Cliente]</h2>
-                        <p class="mt-6 text-lg text-gray-300 leading-relaxed">
-                            Com mais de [X] anos de experiência, nossa missão é oferecer um atendimento jurídico humanizado, transparente e altamente técnico.
-                        </p>
-                        <p class="mt-4 text-lg text-gray-300 leading-relaxed">
-                            Acreditamos que cada caso é único. Por isso, dedicamos tempo para entender profundamente suas necessidades e traçar a melhor estratégia para garantir seus direitos.
-                        </p>
-                        <p class="mt-4 text-lg text-gray-300 leading-relaxed">
-                            Somos especialistas em [mencionar as 3 áreas], com um histórico comprovado de sucesso em casos complexos, sempre pautados pela ética e pelo compromisso com o cliente.
-                        </p>
+                   <!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalita Ribeiro Advocacia - Previdenciário, Trabalhista e Cível</title>
+    <meta name="description" content="Escritório de advocacia especializado em Direito Previdenciário, Trabalhista e Cível. Atendimento humanizado e focado em resultados.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração da Paleta de Cores (Azul e Dourado) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#0B193A', // Azul Marinho da sua imagem
+                        'brand-gold': '#C9A87C', // Creme/Dourado da sua imagem
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos Personalizados (Imagens de Fundo) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Efeito de sublinhado animado para o menu */
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #C9A87C; /* brand-gold */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 100%;
+        }
+
+        /* Estilo para a imagem de fundo do Hero */
+        #home {
+            /* IMPORTANTE:
+              Substitua 'fundo-hero.jpg' pelo nome da sua imagem.
+              Coloque a imagem na mesma pasta do arquivo .html
+            */
+            background-image: url('fundo-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Estilo para a imagem de fundo das Avaliações */
+        #avaliacoes {
+            background-image: url('fundo-avaliacoes.jpg'); /* <-- Coloque sua imagem aqui */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efeito parallax */
+        }
+
+        /* Estilo para a imagem de fundo do Contato */
+        #contato {
+            background-image: url('fundo-contato.jpg'); /* <-- Coloque sua imagem aqui */
+            background-size: cover;
+            background-position: center;
+            /* Deixei sem o 'fixed' para um efeito de rolagem normal */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- 
+      HEADER (Cabeçalho)
+      Navegação principal e CTA (Call to Action) de WhatsApp.
+    -->
+    <header class="bg-brand-blue/90 backdrop-blur-md text-white py-4 shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="font-bold text-2xl text-brand-gold">
+                Dra. Thalita Ribeiro
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-brand-gold transition-colors duration-300">Início</a>
+                <a href="#areas" class="nav-link hover:text-brand-gold transition-colors duration-300">Áreas de Atuação</a>
+                <a href="#sobre" class="nav-link hover:text-brand-gold transition-colors duration-300">Sobre</a>
+                <a href="#avaliacoes" class="nav-link hover:text-brand-gold transition-colors duration-300">Avaliações</a>
+                <a href="#contato" class="nav-link hover:text-brand-gold transition-colors duration-300">Contato</a>
+            </div>
+
+            <!-- Botão WhatsApp (Desktop) -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/55SEUNUMERO" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full shadow-md transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 23.943L4.823 22.11a11.917 11.917 0 01-2.61-6.092C2.21 9.61 6.61 5.21 12.018 5.21c5.407 0 9.808 4.4 9.808 9.807 0 5.408-4.4 9.808-9.808 9.808a11.9 11.9 0 01-5.748-1.583L.057 23.943zm4.98-2.682l.338.197c1.65 1.01 3.596 1.558 5.62 1.558 4.793 0 8.68-3.888 8.68-8.68 0-4.793-3.888-8.68-8.68-8.68-4.794 0-8.68 3.888-8.68 8.68 0 2.15.787 4.11 2.08 5.65l.23.335-1.124 2.91 2.96-.983zM12.018 7.31a.57.57 0 00-.57.57v3.42c0 .315.255.57.57.57h3.42a.57.57 0 00.57-.57v-3.42a.57.57 0 00-.57-.57h-3.42zm4.5 5.123c-.225-.113-1.33-.656-1.536-.73-.207-.074-.356-.113-.506.113-.15.225-.58.73-.71 1.04-.13.315-.26.356-.486.225-.225-.13-1.16-.428-2.21-1.36-.816-.73-1.36-1.636-1.51-1.91-.15-.27-.015-.42.1-.555.113-.113.248-.28.373-.42.124-.14.167-.248.25-.413.08-.167.04-.315-.015-.428-.056-.113-.506-1.22-.69-1.67-.184-.45-.37-.39-.506-.39-.13 0-.28 0-.43.015-.15.015-.39.056-.6.315-.21.26-.816.8-.816 1.95 0 1.15.83 2.26 1.18 2.68.35.42 1.7 2.58 4.11 3.61 2.41 1.03 2.41.69 2.84.63.43-.06 1.33-.54 1.51-.96.18-.42.18-.78.13-1.04-.05-.26-.18-.39-.37-.53z"/></svg>
+                    <span>Fale Conosco</span>
+                </a>
+            </div>
+
+            <!-- Menu Mobile (Botão) -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile (Dropdown) -->
+        <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-4 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300">Início</a>
+            <a href="#areas" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300">Áreas de Atuação</a>
+            <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300">Sobre</a>
+            <a href="#avaliacoes" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300">Avaliações</a>
+            <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-gold hover:text-brand-blue transition-colors duration-300">Contato</a>
+            <a href="https://wa.me/55SEUNUMERO" target="_blank" class="block w-full text-left bg-green-500 hover:bg-green-600 text-white font-bold mt-2 py-3 px-3 rounded-lg shadow-md transition-all duration-300 flex items-center justify-center space-x-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 23.943L4.823 22.11a11.917 11.917 0 01-2.61-6.092C2.21 9.61 6.61 5.21 12.018 5.21c5.407 0 9.808 4.4 9.808 9.807 0 5.408-4.4 9.808-9.808 9.808a11.9 11.9 0 01-5.748-1.583L.057 23.943zm4.98-2.682l.338.197c1.65 1.01 3.596 1.558 5.62 1.558 4.793 0 8.68-3.888 8.68-8.68 0-4.793-3.888-8.68-8.68-8.68-4.794 0-8.68 3.888-8.68 8.68 0 2.15.787 4.11 2.08 5.65l.23.335-1.124 2.91 2.96-.983zM12.018 7.31a.57.57 0 00-.57.57v3.42c0 .315.255.57.57.57h3.42a.57.57 0 00.57-.57v-3.42a.57.57 0 00-.57-.57h-3.42zm4.5 5.123c-.225-.113-1.33-.656-1.536-.73-.207-.074-.356-.113-.506.113-.15.225-.58.73-.71 1.04-.13.315-.26.356-.486.225-.225-.13-1.16-.428-2.21-1.36-.816-.73-1.36-1.636-1.51-1.91-.15-.27-.015-.42.1-.555.113-.113.248-.28.373-.42.124-.14.167-.248.25-.413.08-.167.04-.315-.015-.428-.056-.113-.506-1.22-.69-1.67-.184-.45-.37-.39-.506-.39-.13 0-.28 0-.43.015-.15.015-.39.056-.6.315-.21.26-.816.8-.816 1.95 0 1.15.83 2.26 1.18 2.68.35.42 1.7 2.58 4.11 3.61 2.41 1.03 2.41.69 2.84.63.43-.06 1.33-.54 1.51-.96.18-.42.18-.78.13-1.04-.05-.26-.18-.39-.37-.53z"/></svg>
+                <span>Fale Conosco</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 
+          HERO (Seção Inicial)
+          A primeira coisa que o visitante vê. Imagem de fundo e chamada principal.
+        -->
+        <section id="home" class="h-[85vh] min-h-[600px] flex items-center justify-center text-center text-white relative">
+            <!-- Overlay para escurecer o fundo e dar legibilidade ao texto -->
+            <div class="absolute inset-0 bg-brand-blue/70"></div>
+            
+            <div class="relative z-10 p-4">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    ADVOCACIA ESPECIALIZADA
+                </h1>
+                <p class="mt-4 text-xl md:text-3xl font-light text-brand-gold" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                    Garantindo seus direitos nas áreas Previdenciária, Trabalhista e Cível.
+                </p>
+                <a href="#contato" class="mt-10 inline-block bg-brand-gold text-brand-blue font-bold text-lg py-3 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-white">
+                    Fale com uma Especialista
+                </a>
+            </div>
+        </section>
+
+        <!-- 
+          ÁREAS DE ATUAÇÃO
+          Cards com os 3 serviços principais.
+        -->
+        <section id="areas" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-brand-gold tracking-wide uppercase">Nossos Serviços</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-bold text-brand-blue">Áreas de Atuação</p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Previdenciário -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue/10 text-brand-blue">
+                                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.768 0-1.536.219-2.121.659-.922.69-1.423 1.737-1.423 2.818Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h7.5M8.25 17.25h7.5c.134 0 .26-.004.383-.012M8.25 17.25c-.134 0-.26.004-.383.012M12 21c-4.63 0-8.413-3.668-8.94-8.285a.5.5 0 0 1 .49-.515h16.9a.5.5 0 0 1 .49.515C20.413 17.332 16.63 21 12 21Z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-bold text-brand-blue">Direito Previdenciário</h3>
+                            <p class="mt-4 text-base text-gray-600">
+                                Aposentadorias (idade, tempo de contribuição, especial), auxílio-doença, pensão por morte, BPC/LOAS e revisões de benefícios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Trabalhista -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue/10 text-brand-blue">
+                                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A1.875 1.875 0 0 1 18.375 22.5H5.625a1.875 1.875 0 0 1-1.124-2.382Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h.008v.008H19.5V12Zm-7.5 0h.008v.008H12V12Zm-7.5 0h.008v.008H4.5V12Z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-bold text-brand-blue">Direito Trabalhista</h3>
+                            <p class="mt-4 text-base text-gray-600">
+                                Defesa dos direitos do trabalhador, rescisão indireta, horas extras, adicional de insalubridade, acidentes de trabalho e assédio moral.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Cível -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue/10 text-brand-blue">
+                                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M12.75 21v-9.335A48.34 48.34 0 0 1 12 11.625c-2.257 0-4.436.33-6.53.945V21M3 21h4.5V3.545M3 21v-9.335c2.094-.615 4.273-.945 6.53-.945 2.257 0 4.436.33 6.53.945V21Z" /></svg>
+                            </div>
+                            <h3 class="mt-6 text-2xl font-bold text-brand-blue">Direito Cível</h3>
+                            <p class="mt-4 text-base text-gray-600">
+                                Ações de indenização por danos morais e materiais, direito do consumidor, contratos, cobranças, divórcio, pensão alimentícia e inventários.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SOBRE (Gera confiança e humaniza)
+          Seção com foto e biografia.
+        -->
+        <section id="sobre" class="bg-brand-blue text-white py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Foto de Perfil -->
+                <div class="w-full md:w-1/2 lg:w-5/12">
+                    <img 
+                        src="foto-perfil.jpg" 
+                        alt="Dra. Thalita Ribeiro" 
+                        class="rounded-2xl shadow-2xl w-full h-auto object-cover aspect-square"
+                        onerror="this.src='https://placehold.co/600x600/C9A87C/0B193A?text=Dra.+Thalita+Ribeiro'; this.onerror=null;"
+                    >
+                </div>
+
+                <!-- Texto Sobre (ATUALIZADO) -->
+                <div class="w-full md:w-1/2 lg:w-7/12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Sobre a Dra. Thalita Ribeiro</h2>
+                    <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+                        Meu nome é Thalita Ribeiro da Silva, sou advogada atuante nas áreas previdenciária, trabalhista e cível. Minha missão nasceu no momento em que percebi que havia muita gente sofrendo calada, sem saber que tinha direitos, essas pessoas precisavam de alguém que realmente se importasse.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                        Desde o início da minha trajetória, enfrentei desafios comuns a muitas mulheres na advocacia: subestimaram minha capacidade por causa da idade, do gênero, e em alguns ambientes, o reconhecimento não veio como deveria. Mas encarei cada situação como um aprendizado. Comecei sozinha, com a certeza de que estava no caminho certo, guiada pelo propósito de fazer a diferença na vida das pessoas.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                        Hoje, estou à frente do meu segundo escritório, com muitas conquistas ao longo do caminho incluindo inúmeros benefícios concedidos a clientes que hoje vivem com dignidade e justiça.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                        Meu propósito é ser ponte entre as pessoas e os direitos que elas nem sempre sabem que têm. Quero que cada cliente se sinta amparado, ouvido e representado com seriedade e humanidade. O direito não deve ser distante ou inacessível, ele precisa estar ao lado de quem mais precisa.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                        Se você sente que está sozinho(a) nessa jornada, saiba: eu estou aqui para te ajudar a lutar pelos seus direitos com coragem, conhecimento e empatia.
+                    </p>
                         
                         <!-- Diferenciais -->
                         <div class="mt-10 space-y-4">
