@@ -117,7 +117,7 @@
               ATENÇÃO: Substitua 'src' pelo caminho da imagem que sua cliente enviou.
               Usei um placeholder como exemplo.
             -->
-            <img src="head.png" 
+            <img src="head.png"
                  alt="Assessoria Jurídica Dra. Thalita Ribeiro" 
                  class="w-full h-auto object-cover"
                  onerror="this.src='https://placehold.co/1920x800/e2e8f0/a0aec0?text=Imagem+da+Advogada+Aqui'; this.onerror=null;">
@@ -146,7 +146,7 @@
         </section>
 
         <!-- 
-          ÁREAS DE ATUAÇÃO (MODIFICADO PARA CARROSSEL COM BOTÕES)
+          ÁREAS DE ATUAÇÃO (CORRIGIDO: Botões ao lado)
         -->
         <section id="areas" class="py-16 sm:py-24 bg-gray-50 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,17 +158,17 @@
                 </div>
 
                 <!-- Contêiner dos Botões e Carrossel -->
-                <div class="relative mt-16">
+                <div class="relative mt-16 flex items-center group">
                     
-                    <!-- Botão Anterior -->
-                    <button id="scroll-prev" class="absolute top-1/2 left-0 sm:left-2 -translate-y-1/2 z-20 bg-white/70 backdrop-blur-sm rounded-full p-2 shadow-md text-brand-blue hover:bg-white transition duration-300">
+                    <!-- Botão Anterior (Ao lado, não sobre) -->
+                    <button id="scroll-prev" class="absolute left-0 -translate-x-12 z-20 bg-white/70 backdrop-blur-sm rounded-full p-2 shadow-md text-brand-blue hover:bg-white transition duration-300 opacity-0 group-hover:opacity-100 hidden sm:block">
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
                     <!-- Carrossel Horizontal -->
-                    <div id="carousel-container" class="relative z-10 flex space-x-8 overflow-x-auto snap-x snap-mandatory horizontal-scroll pb-8 scroll-smooth px-2">
+                    <div id="carousel-container" class="relative z-10 flex space-x-8 overflow-x-auto snap-x snap-mandatory horizontal-scroll pb-8 scroll-smooth w-full">
                         
                         <!-- Card 1: BPC -->
                         <div class="snap-center w-80 sm:w-96 flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
@@ -228,8 +228,8 @@
 
                     </div>
 
-                    <!-- Botão Próximo -->
-                    <button id="scroll-next" class="absolute top-1/2 right-0 sm:right-2 -translate-y-1/2 z-20 bg-white/70 backdrop-blur-sm rounded-full p-2 shadow-md text-brand-blue hover:bg-white transition duration-300">
+                    <!-- Botão Próximo (Ao lado, não sobre) -->
+                    <button id="scroll-next" class="absolute right-0 translate-x-12 z-20 bg-white/70 backdrop-blur-sm rounded-full p-2 shadow-md text-brand-blue hover:bg-white transition duration-300 opacity-0 group-hover:opacity-100 hidden sm:block">
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
@@ -247,7 +247,7 @@
                 <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
                     <!-- Imagem da Advogada -->
                     <div class="flex-shrink-0 w-full md:w-1/2 lg:w-5/12">
-                        <img src="IMG_4406.jpg" 
+                        <img src="IMG_4406.JPG" 
                              alt="Dra. Thalita Ribeiro" 
                              class="rounded-2xl shadow-2xl w-full h-auto"
                              onerror="this.src='https://placehold.co/600x800/C9A87C/0B193A?text=Dra.+Thalita+Ribeiro'; this.onerror=null;">
@@ -266,7 +266,7 @@
                             Hoje, estou à frente do meu segundo escritório, com muitas conquistas ao longo do caminho including inúmeros benefícios concedidos a clientes que hoje vivem com dignidade e justiça.
                         </p>
                         <p class="mt-4 text-lg text-gray-300 leading-relaxed">
-                            Meu propósito é ser ponte entre as pessoas e os direitos que elas nem sempre sabem que têm. Quero que cada cliente se sinta amparado, ouvido e representado com seriedade e humanidade. O direito não deve ser distante ou inacessível, ele precisa estar ao lado de quem mais precisa.
+                            Meu propósito é ser ponte entre as pessoas e os direitos que elas nem sempre sabem que têm. Quero que each cliente se sinta amparado, ouvido e representado com seriedade e humanidade. O direito não deve ser distante ou inacessível, ele precisa estar ao lado de quem mais precisa.
                         </p>
                         <p class="mt-4 text-lg text-gray-300 leading-relaxed">
                             Se você sente que está sozinho(a) nessa jornada, saiba: eu estou aqui para te ajudar a lutar pelos seus direitos com coragem, conhecimento e empatia.
@@ -425,10 +425,10 @@
             </div>
         </div>
 
-        <!-- Mapa do Google -->
+        <!-- Mapa do Google (ATUALIZADO) -->
         <div class="w-full">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.590666668707!2d-49.33324838883584!3d-16.74797171954388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935efbe1131a6d05%3A0xe531b7c1c20c0c66!2sR.%20Versales%2C%20QD%2003%20-%20LT%2008%20-%20Res.%20Village%20Garavelo%2C%20Aparecida%20de%20Goi%C3%A2nia%20-%20GO%2C%2074968-541!5e0!3m2!1spt-BR!2sbr!4v1730897530591!5m2!1spt-BR!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.701968532402!2d-49.25082042598379!3d-16.81776140561571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935efb450d6b2cb5%3A0xe4f9fef59da545bd!2sAdvogada%20em%20Aparecida%20de%20Goi%C3%A2nia%20Thalita%20Ribeiro!5e0!3m2!1spt-BR!2sbr!4v1730902030950!5m2!1spt-BR!2sbr"
                 width="100%" 
                 height="450" 
                 style="border:0;" 
@@ -441,7 +441,7 @@
         <!-- Barra de Copyright (Branca) -->
         <div class="bg-white py-6">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-                <p>&copy; 2025 Dra. Thalita Ribeiro Advocacia. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Dra. Thalita Ribeiro Advocacia | Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -475,7 +475,7 @@
 
     <!-- 
       =====================================================
-      NOVO SCRIPT (Menu Mobile + Carrossel)
+      SCRIPT (Menu Mobile + Carrossel)
       =====================================================
     -->
     <script>
@@ -540,6 +540,10 @@
                         prevBtn.classList.add('hidden');
                         nextBtn.classList.add('hidden');
                         return;
+                    } else {
+                        // Garante que eles apareçam em desktop
+                        prevBtn.classList.remove('hidden');
+                        nextBtn.classList.remove('hidden');
                     }
                     
                     const scrollLeft = Math.ceil(carouselContainer.scrollLeft); // Arredonda para cima
@@ -547,16 +551,20 @@
 
                     // Botão Anterior
                     if (scrollLeft <= 0) {
-                        prevBtn.classList.add('hidden');
+                        prevBtn.classList.add('opacity-0'); // Fica invisível mas ocupa espaço
+                        prevBtn.disabled = true;
                     } else {
-                        prevBtn.classList.remove('hidden');
+                        prevBtn.classList.remove('opacity-0');
+                        prevBtn.disabled = false;
                     }
 
                     // Botão Próximo
                     if (scrollLeft >= maxScroll - 5) { // -5 para margem de erro
-                        nextBtn.classList.add('hidden');
+                        nextBtn.classList.add('opacity-0');
+                        nextBtn.disabled = true;
                     } else {
-                        nextBtn.classList.remove('hidden');
+                        nextBtn.classList.remove('opacity-0');
+                        nextBtn.disabled = false;
                     }
                 };
 
