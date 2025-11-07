@@ -99,17 +99,18 @@
           Imagem com botão flutuante no canto.
           (BOTÃO AJUSTADO PARA MOBILE)
         -->
-        <section id="home" class="bg-gray-100 py-12 sm:py-16"> <!-- Adicionado padding à seção -->
+        <section id="home" class="bg-gray-100 sm:py-12 sm:py-16"> <!-- Mudança: Padding removido do mobile -->
 
             <!-- NOVO: Contêiner para centralizar a imagem e ser a referência 'relative' -->
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Mudança: max-w-none e px-0 no mobile, sm:max-w-7xl e sm:px-6 no desktop -->
+            <div class="relative max-w-none sm:max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
                 <!-- 
                   ATENÇÃO: Substitua 'src' pelo caminho da imagem que sua cliente enviou.
                   Usei um placeholder como exemplo.
                 -->
                 <img src="head.png" 
                      alt="Assessoria Jurídica Dra. Thalita Ribeiro" 
-                     class="w-full h-auto object-cover rounded-2xl shadow-lg"
+                     class="w-full h-auto object-cover sm:rounded-2xl sm:shadow-lg" <!-- Mudança: Rounded e Shadow removidos do mobile -->
                      onerror="this.src='https://placehold.co/1920x800/e2e8f0/a0aec0?text=Imagem+da+Advogada+Aqui'; this.onerror=null;">
 
                 <!-- 
@@ -118,7 +119,7 @@
                 -->
                 <a href="https://wa.me/5562991524475?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+uma+consulta."
                    target="_blank"
-                   class="absolute z-10 bottom-4 right-6 sm:bottom-8 sm:right-8 flex items-center justify-center gap-2 sm:gap-3 bg-green-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg font-bold text-sm sm:text-lg hover:bg-green-600 transition duration-300 transform sm:hover:scale-105">
+                   class="absolute z-10 bottom-4 right-4 sm:bottom-8 sm:right-8 flex items-center justify-center gap-2 sm:gap-3 bg-green-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg font-bold text-sm sm:text-lg hover:bg-green-600 transition duration-300 transform sm:hover:scale-105">
                     
                     <!-- SVG do WhatsApp (h-6 no mobile, sm:h-8 em telas maiores) -->
                     <svg class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
